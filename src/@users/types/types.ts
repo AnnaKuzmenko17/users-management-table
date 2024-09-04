@@ -27,3 +27,10 @@ export interface User {
   website: string;
   company: Company;
 }
+
+export enum Category {
+  NAME = 'name',
+  USER_NAME = 'username',
+  EMAIL = 'email',
+  PHONE = 'phone',
+}
