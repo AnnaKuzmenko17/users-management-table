@@ -1,13 +1,13 @@
+import {User} from '@users/types/types';
+import type {FC} from 'react';
+
 import {UserTableRow} from '../UserTableRow/UserTableRow';
-import {useUsersTableBody} from './useUsersTableBody';
 
-export const UserTableBody = () => {
-  const users = useUsersTableBody();
+interface Props {
+  users: User[];
+}
 
-  if (!users.length) {
-    return <p>There is no such user. Please try again.</p>;
-  }
-
+export const UserTableBody: FC<Props> = ({users}) => {
   return (
     <tbody>
       {users.map((user) => (

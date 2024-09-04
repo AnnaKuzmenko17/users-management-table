@@ -1,11 +1,10 @@
 :root {
   --mainFontColor: #333333;
-  --red: #c40909;
-  --dark-pink: #f18b8b;
-  --light-pink: #e4cbcb;
-  --white: #ffffff;
-  --grey: #75728d;
-  --light-grey: #aeadbd;
-  --light: #eef2f1;
+  --primary: #75728d;
+  --accent: #e4cbcb;
+  --accent-dark: #f18b8b;
   --basic: #f1f1f1;
+  --white: #ffffff;
+
+  --shadow: rgba(0, 0, 0, 0.1);
 }

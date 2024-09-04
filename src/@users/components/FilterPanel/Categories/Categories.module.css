@@ -1,0 +1,61 @@
+.radioGroup {
+  width: 50%;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.radioInput {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.radioButton {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--basic);
+  border: 2px solid var(--mainFontColor);
+  margin-right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.radioButton:checked {
+  background-color: var(--accent);
+}
+
+.radioButton:checked::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-dark);
+  border-radius: 50%;
+  position: absolute;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+}
+
+.radioButton:not(:checked)::after {
+  transform: scale(0);
+}
+
+.radioInput:hover .radioButton {
+  border-color: var(--primary);
+}
+
+.radioInput:hover {
+  color: var(--primary);
+}

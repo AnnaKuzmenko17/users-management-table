@@ -1,3 +1,4 @@
+import {Title} from '../Title/Title';
 import {Categories} from './Categories/Categories';
 import {Search} from './Search/Search';
 import {useFilterPanel} from './useFilterPanel';
@@ -7,6 +8,7 @@ export const FilterPanel = () => {
 
   return (
     <div>
+      <Title text="Filter by category" />
       <Categories
         onChange={handleChangeCategory}
         selectedCategory={selectedCategory}

@@ -1,5 +1,6 @@
 import type {ChangeEvent, FC, KeyboardEvent} from 'react';
 
+import styles from './Search.module.css';
 import {useSearch} from './useSearch';
 
 interface Props {
@@ -12,7 +13,7 @@ export const Search: FC<Props> = ({searchValue, onSearch, onKeyDown}) => {
   const placeholder = useSearch();
 
   return (
-    <div>
+    <div className={styles.search}>
       <input
         type="search"
         value={searchValue}

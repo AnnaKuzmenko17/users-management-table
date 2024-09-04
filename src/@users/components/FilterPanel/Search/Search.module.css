@@ -1,0 +1,28 @@
+.search {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+
+  input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--accent);
+    box-shadow: 0 4px 8px var(--shadow);
+    border-radius: 15px;
+    background-color: var(--basic);
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+
+  input::placeholder {
+    color: var(--primary);
+  }
+
+  input:focus,
+  input:hover {
+    border-color: var(--mainFontColor);
+    background-color: var(--white);
+  }
+}

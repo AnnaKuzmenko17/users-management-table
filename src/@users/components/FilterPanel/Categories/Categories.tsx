@@ -1,6 +1,7 @@
 import {Category} from '@users/types/types';
 import type {ChangeEvent, FC} from 'react';
 
+import styles from './Categories.module.css';
 import {CATEGORY_OPTIONS} from './constants';
 
 interface Props {
@@ -9,17 +10,23 @@ interface Props {
 }
 export const Categories: FC<Props> = ({onChange, selectedCategory}) => {
   return (
-    <div>
+    <div className={styles.radioGroup}>
       {CATEGORY_OPTIONS.map((option) => (
-        <label key={option.value}>
-          <input
-            type="radio"
-            value={option.value}
-            checked={selectedCategory === option.value}
-            onChange={onChange}
-          />
-          {option.label}
-        </label>
+        <div
+          className={styles.radio}
+          key={option.value}
+        >
+          <label className={styles.radioInput}>
+            <input
+              className={styles.radioButton}
+              type="radio"
+              value={option.value}
+              checked={selectedCategory === option.value}
+              onChange={onChange}
+            />
+            {option.label}
+          </label>
+        </div>
       ))}
     </div>
   );

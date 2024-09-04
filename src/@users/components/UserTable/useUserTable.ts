@@ -1,13 +1,10 @@
-import {
-  filteredUsersSelector,
-  usersSelector,
-} from '@users/core/reducers/UsersReducer/selectors';
+import {filteredUsersSelector, usersSelector} from '@users/core/reducers/UsersReducer/selectors';
 import {setUsers} from '@users/core/reducers/UsersReducer/usersSlice';
 import {getUsers as getUsersData} from '@users/facade/getUsers/getUsers';
 import {useEffect} from 'react';
 import {useAppDispatch, useAppSelector} from 'src/app/store';
 
-export const useUsersTableBody = () => {
+export const useUserTable = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {

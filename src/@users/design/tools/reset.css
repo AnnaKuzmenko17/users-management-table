@@ -51,3 +51,9 @@ h6 {
   font-weight: inherit;
   font-size: inherit;
 }
+
+body {
+  font-family: var(--mainFontFamily);
+  font-size: var(--mainFontSize);
+  background-color: var(--basic);
+}
